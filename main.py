@@ -33,6 +33,10 @@ def main():
                 print("Game over!")
                 pygame.quit()
                 sys.exit()
+            for shot in shots:
+                if ast.collision_check(shot):
+                    shot.kill()
+                    ast.kill()
         screen.fill((0, 0, 0))
         for drw in drawable:
             drw.draw(screen)
