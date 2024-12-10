@@ -36,7 +36,7 @@ def main():
             for shot in shots:
                 if ast.collision_check(shot):
                     shot.kill()
-                    ast.kill()
+                    ast.split()
         screen.fill((0, 0, 0))
         for drw in drawable:
             drw.draw(screen)
